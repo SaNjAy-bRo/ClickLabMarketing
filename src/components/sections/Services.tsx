@@ -7,37 +7,37 @@ const services = [
   {
     title: "Google Ads",
     description: "High-intent search campaigns and display strategies that capture ready-to-buy customers at the perfect moment.",
-    icon: MousePointer2,
+    logo: "/logos/google-ads.svg",
     color: "from-blue-600 to-blue-400",
   },
   {
     title: "Meta Ads",
     description: "Leveraging precision targeting on Facebook and Instagram to scale your brand through visually stunning, high-converting creative.",
-    icon: Share2,
+    logo: "/logos/meta.svg",
     color: "from-cyan-600 to-cyan-400",
   },
   {
     title: "Social Media Management",
     description: "End-to-end community building and content strategy that turns followers into loyal brand advocates.",
-    icon: Megaphone,
+    logo: "/logos/social-media.svg",
     color: "from-indigo-600 to-indigo-400",
   },
   {
     title: "Website Development",
     description: "High-performance, conversion-optimized websites built with cutting-edge technology and premium aesthetics.",
-    icon: Layout,
+    logo: "/logos/website.svg",
     color: "from-sky-600 to-sky-400",
   },
   {
     title: "SEO",
     description: "Long-term organic growth strategies that dominate search rankings and build sustainable brand authority.",
-    icon: Target,
+    logo: "/logos/seo.svg",
     color: "from-blue-700 to-indigo-500",
   },
   {
     title: "Email Marketing",
     description: "Advanced lifecycle automation and high-converting campaigns that maximize customer lifetime value.",
-    icon: Mail,
+    logo: "/logos/email.svg",
     color: "from-blue-500 to-cyan-500",
   },
 ];
@@ -93,8 +93,8 @@ export function Services() {
               {/* Dynamic hover backdrop blob */}
               <div className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-bl-[100px] pointer-events-none`} />
 
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-10 bg-gradient-to-br ${service.color} shadow-lg shadow-blue-500/20 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500`}>
-                <service.icon className="w-8 h-8 text-white" />
+              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-10 bg-white shadow-lg shadow-gray-200/50 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 border border-gray-100`}>
+                <img src={service.logo} alt={service.title} className="w-10 h-10 object-contain drop-shadow-sm" />
               </div>
               
               <h3 className="text-2xl font-black mb-4 text-gray-900 group-hover:text-blue-600 transition-colors tracking-tight">

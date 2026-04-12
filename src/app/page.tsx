@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { Services } from "@/components/sections/Services";
@@ -8,13 +7,10 @@ import { Philosophy } from "@/components/sections/Philosophy";
 import { Expertise } from "@/components/sections/Expertise";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { CTA } from "@/components/sections/CTA";
-import { Footer } from "@/components/sections/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-white">
-      <Navbar />
       <Hero />
       <ClientLogos />
       <Services />
@@ -24,8 +20,6 @@ export default function Home() {
       <Expertise />
       <TestimonialsCarousel options={{ loop: true, align: "start" }} />
       <CTA />
-      <Footer />
-      <WhatsAppButton />
     </main>
   );
 }
