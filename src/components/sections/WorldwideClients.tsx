@@ -13,9 +13,9 @@ const clientLogos = [
 
 export function WorldwideClients() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden border-t border-gray-100">
+    <section className="py-8 md:py-10 bg-white relative overflow-hidden border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-sm font-bold text-gray-400 tracking-[0.2em] uppercase">
             Our Worldwide Clients
           </h2>
