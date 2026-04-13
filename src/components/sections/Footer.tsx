@@ -70,7 +70,7 @@ export function Footer() {
                 </div>
                 <div>
                   <span className="block text-gray-500 text-sm mb-1 uppercase tracking-wider">Direct Call</span>
-                  <a href="tel:+15551234567" className="text-white hover:text-cyan-400 transition-colors text-lg font-semibold">+1 (555) 123-4567</a>
+                  <a href="tel:8088233259" className="text-white hover:text-cyan-400 transition-colors text-lg font-semibold">8088233259</a>
                 </div>
               </li>
             </ul>

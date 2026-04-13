@@ -20,8 +20,8 @@ export function CTA() {
               We help businesses prosper throughout the marketing funnel to surge revenue, improve brand visibility and loyalty.
             </p>
             {/* Swapped orange to Official Blue brand color */}
-            <a href="tel:+15551234567" className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold py-3 px-8 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
-              <Phone className="w-5 h-5 mr-3" /> +1 (555) 123-4567
+            <a href="tel:8088233259" className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold py-3 px-8 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
+              <Phone className="w-5 h-5 mr-3" /> 8088233259
             </a>
           </div>
 
