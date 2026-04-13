@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { ArrowRight, Target, BarChart, Zap, CheckCircle2, ShieldCheck, TrendingUp, SearchIcon, Rocket, MousePointer2 } from 'lucide-react';
+import { CTA } from '@/components/sections/CTA';
+import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
@@ -12,12 +14,12 @@ export default function GoogleAdsPage() {
   return (
     <div className="min-h-screen">
       {/* Premium Service Hero Section */}
-      <section className="relative pt-[160px] pb-24 overflow-hidden bg-[#fafcff]">
-        {/* Abstract Background Shapes */}
+      <section className="relative pt-[160px] md:pt-[200px] pb-24 overflow-hidden bg-[#0f172a]">
+        {/* Glowing Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-100/50 blur-[80px]"></div>
-          <div className="absolute top-[20%] -left-[10%] w-[40%] h-[40%] rounded-full bg-cyan-100/50 blur-[80px]"></div>
-          <div className="absolute inset-0 bg-[url('/bg-grid.svg')] opacity-[0.03]"></div>
+          <div className="absolute top-0 left-[20%] w-[60%] h-[100%] rounded-full bg-indigo-600/15 blur-[120px]"></div>
+          {/* Subtle grid pattern overlay */}
+          <div className="absolute inset-0 bg-[url('/bg-grid-white.svg')] opacity-[0.02]"></div>
         </div>
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -30,12 +32,11 @@ export default function GoogleAdsPage() {
                </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight mb-8 leading-tight">
-              Scale Profitably with <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Google Ads Management</span>
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight drop-shadow-lg">
+              Google Ads
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed font-medium max-w-3xl mx-auto">
-              Stop wasting ad spend on broad terms. We build high-intent search campaigns and retargeting display strategies that capture ready-to-buy customers at the precise moment they are searching for your solution.
+            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-medium max-w-2xl mx-auto">
+              Engineer profitability with precision search targeting and rigorous ad optimization.
             </p>
             <div className="flex justify-center gap-4">
                <Link href="/contact">
@@ -154,21 +155,8 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 md:px-8 text-center">
-          <Rocket className="w-16 h-16 mx-auto mb-6 text-blue-200" />
-          <h2 className="text-4xl md:text-5xl font-black mb-6">Stop Wasting Ad Spend Today.</h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-medium">
-            Let our certified experts take over your account to drastically lower your CPA and scale your revenue.
-          </p>
-          <Link href="/contact">
-            <Button className="bg-white text-blue-600 hover:bg-gray-50 px-10 py-6 text-lg font-bold">
-              Claim Your Free Account Audit
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <TestimonialsCarousel />
+      <CTA />
     </div>
   );
 }

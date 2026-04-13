@@ -25,11 +25,11 @@ export default function ContactPage() {
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
               <span className="text-xs font-bold tracking-widest text-cyan-100 uppercase">Contact Our Team</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-8 leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-8 leading-tight drop-shadow-lg">
               Let's Build Something <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Incredible Together.</span>
             </h1>
-            <p className="text-lg md:text-2xl text-slate-300 mb-0 leading-relaxed font-medium max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-300 mb-0 leading-relaxed font-medium max-w-3xl mx-auto">
               Whether you need to scale your existing ad accounts or build a high-performance website from scratch, our team is ready to execute.
             </p>
           </div>
@@ -132,13 +132,12 @@ export default function ContactPage() {
 
                  <div className="space-y-2">
                    <label className="text-sm font-bold text-gray-900">Services Required</label>
-                   <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:bg-white transition-all font-medium text-gray-600">
-                     <option value="" disabled selected>Select a primary service</option>
+                   <select defaultValue="" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:bg-white transition-all font-medium text-gray-600">
+                     <option value="" disabled>Select a primary service</option>
                      <option value="google-ads">Google Ads Management</option>
                      <option value="meta-ads">Meta Ads & Social Advertising</option>
                      <option value="web-dev">Website Development</option>
                      <option value="seo">SEO & Organic Growth</option>
-                     <option value="email">Email Marketing Lifecycle</option>
                      <option value="full-stack">Full-Stack Retainer (All of the above)</option>
                    </select>
                  </div>

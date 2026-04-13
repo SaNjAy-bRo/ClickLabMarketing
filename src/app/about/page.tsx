@@ -27,11 +27,11 @@ export default function AboutPage() {
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(96,165,250,0.8)]"></span>
               <span className="text-xs font-bold tracking-widest text-blue-100 uppercase">The ClickLab Story</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-8 leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-8 leading-tight drop-shadow-lg">
               We Don't Track Clicks.<br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">We Track Revenue.</span>
             </h1>
-            <p className="text-lg md:text-2xl text-slate-300 mb-0 leading-relaxed font-medium max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-300 mb-0 leading-relaxed font-medium max-w-3xl mx-auto">
               ClickLab was founded on a simple premise: marketing should be an investment, not an expense. We are a team of data-obsessed growth engineers building systems that predictably scale businesses.
             </p>
           </div>

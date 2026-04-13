@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { ArrowRight, Users, Image as ImageIcon, TrendingUp, ShieldCheck, Video, LayoutDashboard, Rocket } from 'lucide-react';
+import { CTA } from '@/components/sections/CTA';
+import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
@@ -12,12 +14,12 @@ export default function MetaAdsPage() {
   return (
     <div className="min-h-screen">
       {/* Premium Service Hero Section */}
-      <section className="relative pt-[160px] pb-24 overflow-hidden bg-[#fafcff]">
-        {/* Abstract Background Shapes */}
+      <section className="relative pt-[160px] md:pt-[200px] pb-24 overflow-hidden bg-[#0f172a]">
+        {/* Glowing Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-100/50 blur-[80px]"></div>
-          <div className="absolute top-[20%] -left-[10%] w-[40%] h-[40%] rounded-full bg-cyan-100/50 blur-[80px]"></div>
-          <div className="absolute inset-0 bg-[url('/bg-grid.svg')] opacity-[0.03]"></div>
+          <div className="absolute top-0 left-[20%] w-[60%] h-[100%] rounded-full bg-indigo-600/15 blur-[120px]"></div>
+          {/* Subtle grid pattern overlay */}
+          <div className="absolute inset-0 bg-[url('/bg-grid-white.svg')] opacity-[0.02]"></div>
         </div>
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -30,12 +32,11 @@ export default function MetaAdsPage() {
                </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight mb-8 leading-tight">
-              Dominate Feeds with <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Meta Ads Optimization</span>
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight drop-shadow-lg">
+              Meta Ads
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed font-medium max-w-3xl mx-auto">
-              Turn social scrollers into loyal customers. We deploy advanced audience targeting and thumb-stopping creatives on Facebook and Instagram to drive predictable revenue growth.
+            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-medium max-w-2xl mx-auto">
+              Scale your revenue with high-converting creative and aggressive media buying.
             </p>
             <div className="flex justify-center gap-4">
                <Link href="/contact">
@@ -154,21 +155,8 @@ export default function MetaAdsPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 md:px-8 text-center">
-          <Rocket className="w-16 h-16 mx-auto mb-6 text-blue-200" />
-          <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Scale Your ROAS?</h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-medium">
-            Contact us today for a free strategy session. We'll analyze your current account and build a roadmap to profitability.
-          </p>
-          <Link href="/contact">
-            <Button className="bg-white text-blue-600 hover:bg-gray-50 px-10 py-6 text-lg font-bold">
-              Book Your Free Strategy Call
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <TestimonialsCarousel />
+      <CTA />
     </div>
   );
 }

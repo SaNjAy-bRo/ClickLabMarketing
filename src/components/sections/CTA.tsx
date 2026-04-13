@@ -1,34 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 export function CTA() {
   return (
-    <section id="cta" className="py-12 lg:py-20 bg-white relative">
+    <section id="cta" className="py-8 lg:py-12 bg-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Dark Creative Wrapper matching Image 1 but using strict brand colors */}
-        <div className="bg-[#0b0f19] rounded-[2.5rem] p-8 md:p-16 lg:p-20 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between shadow-2xl border border-gray-800">
+        <div className="bg-gradient-to-br from-blue-950 via-[#0a192f] to-[#020617] rounded-[2.5rem] p-6 md:p-10 lg:p-12 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between shadow-2xl border border-gray-800 border-blue-900/30">
           
           {/* Left Side: Content */}
-          <div className="lg:w-1/2 relative z-10 text-center lg:text-left mb-16 lg:mb-0">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+          <div className="lg:w-1/2 relative z-10 text-center lg:text-left mb-10 lg:mb-0">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
               Boost your <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">revenue</span>
             </h2>
-            <p className="text-lg text-gray-400 font-medium mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              We help businesses prosper throughout the marketing funnel to surge revenue, improve brand visibility and loyalty, and grow their customer base.
+            <p className="text-base text-gray-300 font-medium mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              We help businesses prosper throughout the marketing funnel to surge revenue, improve brand visibility and loyalty.
             </p>
             {/* Swapped orange to Official Blue brand color */}
-            <button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold py-4 px-10 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
-              Get a free strategy session
-            </button>
+            <a href="tel:+15551234567" className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold py-3 px-8 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-1 text-lg">
+              <Phone className="w-5 h-5 mr-3" /> +1 (555) 123-4567
+            </a>
           </div>
 
           {/* Right Side: Creative Line Chart visual */}
-          <div className="lg:w-1/2 relative h-64 w-full flex items-end justify-end pl-0 lg:pl-12 mt-12 lg:mt-0">
+          <div className="lg:w-1/2 relative h-48 w-full flex items-end justify-end pl-0 lg:pl-12 mt-8 lg:mt-0">
             
             {/* Highly visible Background glowing grid */}
-            <div className="absolute inset-0 bg-blue-900/10 rounded-2xl border border-blue-500/20 shadow-inner backdrop-blur-sm overflow-hidden flex justify-between px-6 pointer-events-none">
+            <div className="absolute inset-0 bg-blue-900/20 rounded-2xl border border-blue-500/20 shadow-inner backdrop-blur-sm overflow-hidden flex justify-between px-6 pointer-events-none">
               {[...Array(6)].map((_, i) => (
                 <div key={i} className="h-full w-px bg-gradient-to-b from-transparent via-cyan-500/30 to-transparent" />
               ))}

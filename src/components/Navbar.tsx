@@ -13,12 +13,10 @@ const servicesMenu = [
   { name: "Social Media", href: "/services/social-media-management", description: "Engaged community building", icon: "/logos/social-media.svg" },
   { name: "Web Development", href: "/services/website-development", description: "High-performance websites", icon: "/logos/website.svg" },
   { name: "SEO", href: "/services/seo", description: "Dominate search rankings", icon: "/logos/seo.svg" },
-  { name: "Email Marketing", href: "/services/email-marketing", description: "Lifecycle email automation", icon: "/logos/email.svg" },
 ];
 
 const navLinks = [
   { name: "About Us", href: "/#process" },
-  { name: "Blogs", href: "/#blogs" },
   { name: "Contact Us", href: "/#cta" },
 ];
 
@@ -161,14 +159,6 @@ export function Navbar() {
                 </div>
 
                 <Link
-                  href="/#blogs"
-                  className="text-sm font-bold text-gray-600 hover:text-blue-600 transition-colors uppercase tracking-widest relative group"
-                >
-                  Blogs
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-
-                <Link
                   href="/contact"
                   className="text-sm font-bold text-gray-600 hover:text-blue-600 transition-colors uppercase tracking-widest relative group"
                 >
@@ -248,12 +238,6 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link
-                href="/#blogs"
-                className="text-lg font-bold text-gray-900 px-4 py-3 bg-gray-50 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-colors uppercase tracking-widest"
-              >
-                Blogs
-              </Link>
               <Link
                 href="/contact"
                 className="text-lg font-bold text-gray-900 px-4 py-3 bg-gray-50 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-colors uppercase tracking-widest"
