@@ -16,8 +16,9 @@ const servicesMenu = [
 ];
 
 const navLinks = [
-  { name: "About Us", href: "/#process" },
-  { name: "Contact Us", href: "/#cta" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -97,6 +98,7 @@ export function Navbar() {
 
               {/* Centered Nav Links */}
               <div className="hidden md:flex items-center justify-center gap-8 flex-1">
+
                 <Link
                   href="/about"
                   className="text-sm font-bold text-gray-600 hover:text-blue-600 transition-colors uppercase tracking-widest relative group"
@@ -157,6 +159,14 @@ export function Navbar() {
                     )}
                   </AnimatePresence>
                 </div>
+
+                <Link
+                  href="/portfolio"
+                  className="text-sm font-bold text-gray-600 hover:text-blue-600 transition-colors uppercase tracking-widest relative group"
+                >
+                  Portfolio
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
 
                 <Link
                   href="/contact"
@@ -238,6 +248,12 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
+              <Link
+                href="/portfolio"
+                className="text-lg font-bold text-gray-900 px-4 py-3 bg-gray-50 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-colors uppercase tracking-widest"
+              >
+                Portfolio
+              </Link>
               <Link
                 href="/contact"
                 className="text-lg font-bold text-gray-900 px-4 py-3 bg-gray-50 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-colors uppercase tracking-widest"
