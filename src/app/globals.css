@@ -105,30 +105,26 @@ body {
     animation: marquee-reverse 30s linear infinite;
   }
 
-  /* Hero Aurora Orbs - Pure CSS for zero jank */
+  /* Hero Aurora Orbs - Orbiting CSS for zero jank */
   @keyframes auroraOrb1 {
-    0%   { transform: translate(0, 0) scale(1); }
-    33%  { transform: translate(80px, -60px) scale(1.15); }
-    66%  { transform: translate(-40px, 40px) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
+    0%   { transform: rotate(0) translate(150px) rotate(0); }
+    100% { transform: rotate(1turn) translate(150px) rotate(-1turn); }
   }
   @keyframes auroraOrb2 {
-    0%   { transform: translate(0, 0) scale(1); }
-    33%  { transform: translate(-100px, 80px) scale(0.85); }
-    66%  { transform: translate(60px, -50px) scale(1.2); }
-    100% { transform: translate(0, 0) scale(1); }
+    0%   { transform: rotate(0) translate(200px) rotate(0); }
+    100% { transform: rotate(-1turn) translate(200px) rotate(1turn); }
   }
   @keyframes auroraOrb3 {
-    0%   { transform: translate(0, 0) scale(1); }
-    33%  { transform: translate(50px, 30px) scale(1.1); }
-    66%  { transform: translate(-80px, 60px) scale(0.95); }
-    100% { transform: translate(0, 0) scale(1); }
+    0%   { transform: rotate(0) translate(120px) rotate(0); }
+    100% { transform: rotate(1turn) translate(120px) rotate(-1turn); }
   }
   @keyframes auroraOrb4 {
-    0%   { transform: translate(0, 0) scale(1); }
-    33%  { transform: translate(-60px, -40px) scale(1.05); }
-    66%  { transform: translate(70px, 50px) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
+    0%   { transform: rotate(0) translate(180px) rotate(0); }
+    100% { transform: rotate(-1turn) translate(180px) rotate(1turn); }
+  }
+  @keyframes auroraOrb5 {
+    0%   { transform: rotate(0) translate(220px) rotate(0); }
+    100% { transform: rotate(1turn) translate(220px) rotate(-1turn); }
   }
   @keyframes glassFloat {
     0%   { transform: translateY(0) rotate(12deg) skewX(12deg); }
@@ -139,10 +135,11 @@ body {
     0%   { transform: translateX(-100%) skewX(-12deg); }
     100% { transform: translateX(300%) skewX(-12deg); }
   }
-  .hero-orb-1 { animation: auroraOrb1 18s ease-in-out infinite; will-change: transform; }
-  .hero-orb-2 { animation: auroraOrb2 22s ease-in-out infinite; will-change: transform; }
-  .hero-orb-3 { animation: auroraOrb3 20s ease-in-out infinite; will-change: transform; }
-  .hero-orb-4 { animation: auroraOrb4 25s ease-in-out infinite; will-change: transform; }
+  .hero-orb-1 { animation: auroraOrb1 15s linear infinite; will-change: transform; }
+  .hero-orb-2 { animation: auroraOrb2 18s linear infinite; will-change: transform; }
+  .hero-orb-3 { animation: auroraOrb3 12s linear infinite; will-change: transform; }
+  .hero-orb-4 { animation: auroraOrb4 20s linear infinite; will-change: transform; }
+  .hero-orb-5 { animation: auroraOrb5 24s linear infinite; will-change: transform; }
   .hero-glass-float { animation: glassFloat 6s ease-in-out infinite; will-change: transform; }
   .hero-light-streak { animation: lightStreak 3.5s ease-in-out infinite 1s; }
   .btn-shimmer {

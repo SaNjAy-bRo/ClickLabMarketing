@@ -15,40 +15,45 @@ export default function WebsiteDevelopmentPage() {
   return (
     <div className="min-h-screen">
       {/* Premium Service Hero Section */}
-      <section className="relative pt-[160px] md:pt-[200px] pb-24 overflow-hidden bg-[#0f172a]">
-        {/* Glowing Background Elements */}
+      <section className="relative flex flex-col justify-center pt-[180px] pb-[80px] md:pt-[220px] md:pb-[120px] overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900">
+        {/* Deep Tech Abstract Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-[20%] w-[60%] h-[100%] rounded-full bg-indigo-600/15 blur-[120px]"></div>
-          {/* Subtle grid pattern overlay */}
-          <div className="absolute inset-0 bg-[url('/bg-grid-white.svg')] opacity-[0.02]"></div>
+          {/* Ambient Lighting */}
+          <div className="absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-blue-500/40 via-cyan-400/10 to-transparent blur-3xl"></div>
+          <div className="absolute bottom-[-20%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-indigo-500/40 via-purple-500/10 to-transparent blur-3xl"></div>
+
+          {/* High-Fidelity 3D Grid */}
+          <div className="absolute inset-0 opacity-40 [mask-image:linear-gradient(to_bottom,white,transparent)]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+          <div className="absolute inset-0 opacity-20 [mask-image:linear-gradient(to_bottom,white,transparent)]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
+
+          {/* Abstract Floating Glass Geometries */}
+          <div className="absolute top-[10%] right-[10%] w-[350px] h-[350px] bg-gradient-to-br from-blue-400/10 to-transparent border border-white/20 rounded-3xl backdrop-blur-md shadow-[0_0_50px_rgba(59,130,246,0.2)] animate-[spin_40s_linear_infinite]" style={{ transform: 'rotate(-15deg) skew(-10deg) perspective(1000px)' }}></div>
+          
+          <div className="absolute bottom-[5%] right-[25%] w-[200px] h-[200px] bg-gradient-to-tr from-cyan-400/20 to-transparent border border-cyan-400/30 rounded-full backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.3)] animate-pulse" style={{ transform: 'translateZ(50px)' }}></div>
+          
+          <div className="absolute top-[20%] left-[5%] w-[400px] h-[400px] bg-gradient-to-bl from-indigo-400/10 to-transparent border border-indigo-400/20 rounded-full backdrop-blur-lg shadow-[0_0_60px_rgba(99,102,241,0.2)] animate-[spin_50s_linear_infinite_reverse]"></div>
+
+          {/* Dynamic Laser Slash */}
+          <div className="absolute top-[-10%] right-[20%] w-[1200px] h-[100px] bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent blur-2xl transform rotate-45 origin-top-right"></div>
+          <div className="absolute top-[-10%] right-[20%] w-[1200px] h-[2px] bg-gradient-to-r from-transparent via-cyan-300/80 to-transparent blur-sm transform rotate-45 origin-top-right"></div>
+          
+          {/* Subtle Data Scanlines */}
+          <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent 0, transparent 2px, #fff 2px, #fff 4px)' }}></div>
         </div>
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Floating Logo Badge */}
-            <div className="relative inline-flex items-center justify-center mb-8">
-               <div className="absolute inset-0 bg-blue-400/30 blur-2xl rounded-full"></div>
-               <div className="w-24 h-24 relative bg-white rounded-3xl shadow-[0_20px_40px_-15px_rgba(37,99,235,0.15)] flex items-center justify-center p-5 border border-white/60 backdrop-blur-xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                 <img src="/logos/website.svg" alt="Website Development Logo" className="w-full h-full object-contain drop-shadow-sm" />
-               </div>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight drop-shadow-lg">
-              Web Development
+          <div className="max-w-4xl text-left">
+            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-6 leading-tight drop-shadow-lg">
+              Website Development
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-300 mb-2 leading-relaxed font-medium max-w-2xl">
               High-performance, conversion-optimized websites and applications built for scale.
             </p>
-            <div className="flex justify-center gap-4">
-               <Link href="/contact">
-                 <Button variant="premium" className="px-8 py-6 text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all">
-                   Upgrade Your Website <ArrowRight className="w-5 h-5 ml-2" />
-                 </Button>
-               </Link>
-            </div>
           </div>
         </div>
       </section>
+
+      <WorldwideClients />
 
       {/* Core Features Section */}
       <section className="py-24 bg-white">
@@ -156,7 +161,6 @@ export default function WebsiteDevelopmentPage() {
         </div>
       </section>
 
-      <WorldwideClients />
       <TestimonialsCarousel />
       <CTA />
     </div>
