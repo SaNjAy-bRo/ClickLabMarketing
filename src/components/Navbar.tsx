@@ -73,7 +73,7 @@ export function Navbar() {
                <span className="hidden sm:inline text-blue-100">Scale your revenue with ClickLab.</span>
             </div>
             <div className="flex items-center gap-4">
-              <a href="mailto:hello@clicklab.com" className="hover:text-blue-200 transition-colors">hello@clicklab.com</a>
+              <a href="mailto:contact@clicklabmarketing.com" className="hover:text-blue-200 transition-colors">contact@clicklabmarketing.com</a>
             </div>
           </div>
         </motion.div>
