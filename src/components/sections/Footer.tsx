@@ -1,6 +1,7 @@
-import { ArrowRight, MapPin, Phone, Mail, MousePointer2 } from "lucide-react";
+import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -14,14 +15,13 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4 pr-8">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 p-[2px]">
-                <div className="w-full h-full bg-gray-900 rounded-[10px] flex items-center justify-center">
-                  <MousePointer2 className="w-7 h-7 text-cyan-400 fill-cyan-400 transition-transform" />
-                </div>
-              </div>
-              <span className="font-extrabold text-3xl tracking-tight text-white">
-                ClickLab
-              </span>
+              <Image
+                src="/logos/clicklab-logo-white.svg"
+                alt="ClickLab"
+                width={200}
+                height={48}
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-lg leading-relaxed mb-8 text-gray-400 font-medium">
               We are a premium digital growth partner. We build, scale, and optimize revenue engines for the world's most ambitious brands.

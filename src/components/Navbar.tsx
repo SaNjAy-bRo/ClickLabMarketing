@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight, MousePointer2, ChevronDown } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const servicesMenu = [
@@ -86,14 +87,14 @@ export function Navbar() {
               {/* Left Logo */}
               <div className="flex-1 flex justify-start">
                 <Link href="/" className="flex items-center gap-3 group">
-                  <div className="w-10 h-10 rounded-xl bg-blue-600 p-[1px] transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.2)]">
-                    <div className="w-full h-full bg-slate-900 rounded-[11px] flex items-center justify-center">
-                      <MousePointer2 className="w-6 h-6 text-blue-400 fill-blue-400 transition-transform" />
-                    </div>
-                  </div>
-                  <span className="font-extrabold text-2xl tracking-tight text-gray-900">
-                    ClickLab
-                  </span>
+                  <Image
+                    src="/logos/clicklab-logo.svg"
+                    alt="ClickLab"
+                    width={180}
+                    height={40}
+                    priority
+                    className="h-10 w-auto"
+                  />
                 </Link>
               </div>
 
