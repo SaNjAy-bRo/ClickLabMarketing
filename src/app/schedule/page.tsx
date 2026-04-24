@@ -173,17 +173,6 @@ export default function SchedulePage() {
                   </select>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-900">Monthly Marketing Budget</label>
-                  <select defaultValue="" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:bg-white transition-all font-medium text-gray-600">
-                    <option value="" disabled>Select your budget range</option>
-                    <option value="under-25k">Under ₹25,000/month</option>
-                    <option value="25k-50k">₹25,000 – ₹50,000/month</option>
-                    <option value="50k-1l">₹50,000 – ₹1,00,000/month</option>
-                    <option value="1l-3l">₹1,00,000 – ₹3,00,000/month</option>
-                    <option value="3l-plus">₹3,00,000+/month</option>
-                  </select>
-                </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-900">Tell us about your goals</label>
