@@ -1,4 +1,5 @@
-"use client";
+// Server Component — no "use client" needed.
+// Hero content renders in initial HTML for instant LCP.
 
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";

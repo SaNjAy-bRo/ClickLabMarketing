@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Zap, LayoutDashboard, Shuffle } from "lucide-react";
 
 const philosophy = [
@@ -43,12 +40,8 @@ export function Philosophy() {
 
           <div className="grid md:grid-cols-3 gap-6 relative z-10">
             {philosophy.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
                 className={`bg-blue-50/80 rounded-2xl p-8 border-t-2 ${item.border} border-blue-100 hover:bg-blue-50 transition-colors duration-300 flex flex-col`}
               >
                 <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 shadow-sm border border-blue-200/50">
@@ -57,7 +50,7 @@ export function Philosophy() {
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 tracking-tight">{item.title}</h3>
                 <p className="text-gray-600 font-medium leading-relaxed flex-1">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
