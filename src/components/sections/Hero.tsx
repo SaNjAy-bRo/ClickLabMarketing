@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
@@ -83,28 +82,21 @@ export function Hero() {
         />
       </div>
 
-      {/* ========== CONTENT ========== */}
+      {/* ========== CONTENT — Uses CSS animations, NOT framer-motion ========== */}
+      {/* This is critical for LCP: content must be visible on first paint without waiting for JS */}
       <div className="container mx-auto max-w-5xl relative z-20 flex flex-col items-center text-center">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
+        {/* Badge — CSS fade-in */}
+        <div className="hero-fade-in" style={{ animationDelay: '0.1s' }}>
           <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/[0.06] text-blue-300 font-bold text-xs md:text-sm tracking-widest uppercase mb-10 border border-white/[0.1] shadow-[0_8px_32px_rgba(37,99,235,0.12)] backdrop-blur-lg">
             <Sparkles className="w-4 h-4 text-cyan-400" /> Growth Marketing Agency
           </span>
-        </motion.div>
+        </div>
 
-        {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-5xl lg:text-[4.5rem] font-black text-white tracking-tighter leading-[1.08] mb-8"
+        {/* Heading — CSS fade-in, NO opacity:0 initial state that blocks LCP */}
+        <h1
+          className="hero-fade-in text-4xl sm:text-5xl lg:text-[4.5rem] font-black text-white tracking-tighter leading-[1.08] mb-8"
+          style={{ animationDelay: '0.2s' }}
         >
           Your Growth Partner <br className="hidden md:block" />
           For{" "}
@@ -112,36 +104,27 @@ export function Hero() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">
               Digital Success
             </span>
-            <motion.span
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="absolute -bottom-1.5 left-0 w-full h-1 bg-gradient-to-r from-blue-500/40 to-cyan-400/40 rounded-full origin-left"
+            <span
+              className="hero-underline-reveal absolute -bottom-1.5 left-0 w-full h-1 bg-gradient-to-r from-blue-500/40 to-cyan-400/40 rounded-full origin-left"
+              style={{ animationDelay: '1s' }}
             />
           </span>
-        </motion.h1>
+        </h1>
 
-        {/* Subheading */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base sm:text-xl lg:text-2xl text-slate-400 font-medium leading-relaxed mb-8 sm:mb-14 max-w-3xl mx-auto px-2"
+        {/* Subheading — CSS fade-in */}
+        <p
+          className="hero-fade-in text-base sm:text-xl lg:text-2xl text-slate-400 font-medium leading-relaxed mb-8 sm:mb-14 max-w-3xl mx-auto px-2"
+          style={{ animationDelay: '0.4s' }}
         >
           We design and execute data-driven marketing infrastructures{" "}
           <br className="hidden lg:block" />
           that turn clicks into measurable enterprise growth.
-        </motion.p>
+        </p>
 
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center gap-5 justify-center w-full sm:w-auto"
+        {/* Buttons — CSS fade-in */}
+        <div
+          className="hero-fade-in flex flex-col sm:flex-row items-center gap-5 justify-center w-full sm:w-auto"
+          style={{ animationDelay: '0.6s' }}
         >
           <Link href="/contact">
             <Button size="lg" variant="default" className="btn-shimmer w-full sm:w-auto h-14 px-10 text-lg rounded-2xl shadow-xl shadow-blue-600/30 active:scale-[0.97] transition-transform">
@@ -154,21 +137,19 @@ export function Hero() {
               View Portfolio
             </Button>
           </Link>
-        </motion.div>
+        </div>
 
-        {/* Trust Label */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.8 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-8 sm:mt-14 flex items-center justify-center gap-5 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-[0.25em]"
+        {/* Trust Label — CSS fade-in */}
+        <div
+          className="hero-fade-in mt-8 sm:mt-14 flex items-center justify-center gap-5 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-[0.25em]"
+          style={{ animationDelay: '1.2s' }}
         >
           <span>Data-Driven Strategy</span>
           <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
           <span>Unmatched ROI Focus</span>
-        </motion.div>
+        </div>
       </div>
+
     </section>
   );
 }

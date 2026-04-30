@@ -198,6 +198,25 @@ body {
     animation: iconDrift 8s ease-in-out infinite;
   }
 
+  /* Hero content fade-in — pure CSS, no JS dependency.
+     Uses animation-fill-mode: both so the element is visible in SSR HTML
+     then plays the animation on first paint without waiting for hydration. */
+  @keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-fade-in {
+    animation: heroFadeIn 0.7s ease-out both;
+  }
+
+  @keyframes heroUnderlineReveal {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+  .hero-underline-reveal {
+    animation: heroUnderlineReveal 0.8s ease-out both;
+  }
+
   /* Disable expensive backdrop-blur on mobile for GPU savings */
   @media (max-width: 768px) {
     .hero-backdrop-reduce {
